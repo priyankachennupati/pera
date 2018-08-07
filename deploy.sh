@@ -1,6 +1,6 @@
 #!/bin/bash
 ENVIRONMENT=$i
-if [ $ENVIRONMENT =: "QA" ];
+if [ $ENVIRONMENT : "QA" ];
 then
 for i in 'cat ip.txt' 
 do
