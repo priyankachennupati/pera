@@ -8,7 +8,9 @@ do
   sleep 3
   sshpass -p "priya1@" scp target/chennupati1.war priya@$i:/home/priya/apache-tomcat-8.5.32/webapps
   echo "starting tomcat server in $i QA server.."
-  sshpass -p "priya1@" ssh priya@$i "JAVA_HOME=/home/priya/jdk1.8.0_172" "/home/priya/apache-tomcat-8.5.32/bin/startup.sh"
+  sshpass -p "priya1@" ssh priya@$i "JAVA_HOME=/home/priya/jdk1.8.0_172" "/home/priya/Desktop/softwares/apache-tomcat-8.5.32/bin/shutdown.sh"
+sleep 8
+sshpass -p "priya1@" ssh priya@$i "JAVA_HOME=/home/priya/jdk1.8.0_172" "/home/priya/Desktop/softwares/apache-tomcat-8.5.32/bin/startup.sh"
 done
  echo "deploy success"
 fi
